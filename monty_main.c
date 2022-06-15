@@ -1,4 +1,7 @@
 #include "monty.h"
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 /**
  * main - The entry point for monty Interpretor.

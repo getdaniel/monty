@@ -2,8 +2,8 @@
 #define MONTY_H
 
 #include <stdio.h>
-#include <stddef.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include <string.h>
 
 #define STACK 0
@@ -66,6 +66,7 @@ void monty_queue(stack_t **stack, unsigned int line_number);
 
 /* Primary Interpreter functions */
 void set_op_tok_error(int error_code);
+void free_tokens(void);
 void free_stack(stack_t **stack);
 int init_stack(stack_t **stack);
 int check_mode(stack_t *stack);
