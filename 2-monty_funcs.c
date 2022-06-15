@@ -80,6 +80,8 @@ void monty_rotl(stack_t **stack, unsigned int line_number)
 	bottom->next = top;
 	top->next = NULL;
 	top->prev = bottom;
+
+	(void)line_number;
 }
 
 /**

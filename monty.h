@@ -1,6 +1,11 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+
 #define STACK 0
 #define QUEUE 1
 #define DELIMS " \n\t\a\b"
@@ -56,9 +61,16 @@ void monty_pchar(stack_t **stack, unsigned int line_number);
 void monty_pstr(stack_t **stack, unsigned int line_number);
 void monty_rotl(stack_t **stack, unsigned int line_number);
 void monty_rotr(stack_t **stack, unsigned int line_number);
+void monty_stack(stack_t **stack, unsigned int line_number);
+void monty_queue(stack_t **stack, unsigned int line_number);
 
 /* Primary Interpreter functions */
 void set_op_tok_error(int error_code);
+void free_stack(stack_t **stack);
+int init_stack(stack_t **stack);
+int check_mode(stack_t *stack);
+unsigned int token_arr_len(void);
+int run_monty(FILE *script_fd);
 
 /* Error message and Error codes */
 int usage_error(void);
@@ -72,5 +84,8 @@ int short_stack_error(unsigned int line_number, char *op);
 int div_error(unsigned int line_number);
 int pchar_error(unsigned int line_number, char *message);
 
+/* Custom standard library functions */
+char **strtow(char *str, char *delims);
+char *get_int(int n);
 
 #endif

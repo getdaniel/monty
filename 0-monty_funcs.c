@@ -28,7 +28,7 @@ void monty_push(stack_t **stack, unsigned int line_number)
 
 	if (op_toks[1] == NULL)
 	{
-		set_op_tok_error();
+		set_op_tok_error(no_int_error(line_number));
 
 		return;
 	}
@@ -152,5 +152,5 @@ void monty_swap(stack_t **stack, unsigned int line_number)
 		tmp->next->prev = (*stack)->next;
 	tmp->next = (*stack)->next;
 	tmp->prev = *stack;
-	(*stack)->next = tmp
+	(*stack)->next = tmp;
 }
