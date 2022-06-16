@@ -2,7 +2,7 @@
 
 void monty_stack(stack_t **stack, unsigned int line_number);
 void monty_queue(stack_t **stack, unsigned int line_number);
-void set_op_toks_error(int error_code);
+void set_op_tok_error(int error_code);
 
 /**
  * monty_stack - Converts a queue to a stack.
@@ -29,11 +29,11 @@ void monty_queue(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * set_op_toks_error - Sets last element of set_op_toks to be an error code.
+ * set_op_tok_error - Sets last element of set_op_toks to be an error code.
  *
  * @error_code: Integer to store as a string in op_toks.
  */
-void set_op_toks_error(int error_code)
+void set_op_tok_error(int error_code)
 {
 	int toks_len = 0, index = 0;
 	char *exit_str = NULL;

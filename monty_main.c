@@ -3,6 +3,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 
+char **op_toks = NULL;
+
 /**
  * main - The entry point for monty Interpretor.
  *

@@ -1,3 +1,4 @@
+#define _GNU_SOURCE
 #include "monty.h"
 
 void free_tokens(void);
