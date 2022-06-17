@@ -33,7 +33,7 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 
 		return;
 	}
-	printf("%d\n", (*stack)->next->n);
+	printf("%c\n", (*stack)->next->n);
 }
 
 /**
