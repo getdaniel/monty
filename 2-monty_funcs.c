@@ -1,4 +1,5 @@
 #include "monty.h"
+#include <ctype.h>
 
 void monty_nop(stack_t **stack, unsigned int line_number);
 void monty_pchar(stack_t **stack, unsigned int line_number);
@@ -33,6 +34,13 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 
 		return;
 	}
+
+	if ((*stack)->next->n < 0 || (*stack)->next->n > 127)
+	{
+		set_op_tok_error(pchar_error(line_number, "value out of range"));
+		return;
+	}
+
 	printf("%c\n", (*stack)->next->n);
 }
 
