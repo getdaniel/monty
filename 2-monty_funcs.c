@@ -29,7 +29,7 @@ void monty_pchar(stack_t **stack, unsigned int line_number)
 {
 	if ((*stack)->next == NULL)
 	{
-		set_op_tok_error(pchar_error(line_number, "Stack empty"));
+		set_op_tok_error(pchar_error(line_number, "stack empty"));
 
 		return;
 	}
