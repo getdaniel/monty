@@ -120,6 +120,7 @@ void monty_pop(stack_t **stack, unsigned int line_number)
 
 		return;
 	}
+
 	next = (*stack)->next->next;
 	free((*stack)->next);
 
